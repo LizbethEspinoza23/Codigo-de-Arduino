@@ -1,0 +1,17 @@
+int valorA0;
+int valorA1;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(A0, INPUT);
+  pinMode(A1, INPUT);
+}
+
+void loop() {
+  valorA0=1+analogRead(A0);
+  valorA1=1+analogRead(A1);
+
+  Serial.print(valorA0);
+  Serial.print('\t');
+  Serial.print(valorA1);
+}
